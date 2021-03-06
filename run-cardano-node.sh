@@ -10,7 +10,7 @@
 if [ $# -ge 1 ]; then
   CMD_PREFIX="$1"
 else
-  CMD_PREFIX="cardano-node"
+  CMD_PREFIX="docker"
 fi
 
 if [ $# -ge 2 ]; then
