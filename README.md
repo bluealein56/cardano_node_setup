@@ -9,14 +9,14 @@ will simply print the cardano-node version.
 
 The following command will run the container in this configuration:
 ``` bash
-docker run registry.gitlab.com/viper-staking/docker-containers/cardano-node:latest
+docker run bluealein56/ehm-node:latest
 ```
 
 ## Alternate configuration (block producing node)
 Below is an example on overriding the default CMD arguments to run cardano-node 
 as a block producing node:
 ``` bash
-docker run registry.gitlab.com/viper-staking/docker-containers/cardano-node:latest \
+docker run bluealein56/ehm-node:latestt \
     --database-path $HOME/cardano-node/db/ \
     --socket-path $HOME/cardano-node/db/node.socket \
     --host-addr "0.0.0.0" \
@@ -31,7 +31,7 @@ docker run registry.gitlab.com/viper-staking/docker-containers/cardano-node:late
 Below is an example on overriding the default CMD arguments to run cardano-node 
 as a relay node:
 ``` bash
-docker run registry.gitlab.com/viper-staking/docker-containers/cardano-node:latest \
+docker run bluealein56/ehm-node:latest \
     --database-path $HOME/cardano-node/db/ \
     --socket-path $HOME/cardano-node/db/node.socket \
     --port 4444 \
@@ -45,7 +45,7 @@ shell. This configuration boots the container into a ZSH shell so that the user
 can interact with the container and run any desired commands. Use this for
 debugging:
 ``` bash
-docker run -it --entrypoint /usr/bin/zsh registry.gitlab.com/viper-staking/docker-containers/cardano-node:latest
+docker run -it --entrypoint /usr/bin/zsh bluealein56/ehm-node:latest
 ```
 
 ## Running with run-cardano-node script
@@ -55,7 +55,7 @@ first argument accepts a command prefix string which specifies where to execute 
 
 ### Docker execution
 ``` bash
-export CMD="docker run --mount type=bind,source=$PWD/config,target=/home/lovelace/cardano-node/ -p 9100:9100 -p 12798:12798 registry.gitlab.com/viper-staking/docker-containers/cardano-node:latest"
+export CMD="docker run --mount type=bind,source=$PWD/config,target=/home/lovelace/cardano-node/ -p 9100:9100 -p 12798:12798 bluealein56/ehm-node:latest"
 ./run-cardano-node.sh $CMD
 ```
 
