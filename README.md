@@ -17,13 +17,13 @@ https://github.com/bluealein56/cardano_docker_containers
 
 # Cloud Hosting Service
 
-####Digital Ocean 
+#### Digital Ocean 
 - Cloud Compute Hosting \
 https://cloud.digitalocean.com/
-####Docker registry 
+#### Docker registry 
 - Cloud Storage Docker Images repository \
 https://hub.docker.com/repository/docker/bluealein56/
-####Git Hub - Cloud Source code repository
+#### Git Hub - Cloud Source code repository
 - Source/Build Code \
 https://github.com/bluealein56/cardano_node_setup \
 https://github.com/bluealein56/cardano_docker_containers
@@ -33,20 +33,20 @@ https://github.com/bluealein56/cardano_docker_containers
 
 -----------------------------------------------------------------------
 
-#Node Topology
+# Node Topology
 ##### 3 nodes, 1 reporting server
 
-####Worker Nodes:
+#### Worker Nodes:
 ehm-relay01  --> Relay Node \
 ehm-relay02 --> Relay Node \
 ehm-bp --> Block Producing Node 
 
-####Reporting Node: 
+#### Reporting Node: 
 ehm-rtview --> RealTimeViewer
 
 -----------------------------------------------------------------------
 
-#Setup Node
+# Setup Node
 
 - ssh to node, install git, pull gitrepos,
 
