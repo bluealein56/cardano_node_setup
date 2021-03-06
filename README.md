@@ -1,6 +1,79 @@
-# Cardano-Node Setup
+# Cardano-Node Setup ( EHM Stake Pool Setup )
 
-Tools for quickly setting up a Cardano-Node!
+
+-----------------------------------------------------------------------
+
+
+Code lives below:
+- EHM Gitub (Node Setup)
+https://github.com/bluealein56/cardano_node_setup
+
+- EHM Gitub (Docker Container)
+https://github.com/bluealein56/cardano_docker_containers
+
+-----------------------------------------------------------------------
+
+
+
+# Cloud Hosting Service
+
+####Digital Ocean 
+- Cloud Compute Hosting \
+https://cloud.digitalocean.com/
+####Docker registry 
+- Cloud Storage Docker Images repository \
+https://hub.docker.com/repository/docker/bluealein56/
+####Git Hub - Cloud Source code repository
+- Source/Build Code \
+https://github.com/bluealein56/cardano_node_setup \
+https://github.com/bluealein56/cardano_docker_containers
+
+
+
+
+-----------------------------------------------------------------------
+
+#Node Topology
+##### 3 nodes, 1 reporting server
+
+####Worker Nodes:
+ehm-relay01  --> Relay Node \
+ehm-relay02 --> Relay Node \
+ehm-bp --> Block Producing Node 
+
+####Reporting Node: 
+ehm-rtview --> RealTimeViewer
+
+-----------------------------------------------------------------------
+
+#Setup Node
+
+- ssh to node, install git, pull gitrepos,
+
+
+```sudo apt update ``` \
+```sudo apt install git``` \
+```git clone https://github.com/bluealein56/cardano_node_setup.git```
+
+```cd cardano_node_setup```\
+```sh get_latest_config_files.sh```\
+```sh sever-setup.sh ```\
+```cd .. ```
+
+
+-----------------------------------------------------------------------
+
+
+*** Start Container***
+
+```cd /home/lovelace```\
+```export CMD="docker run --mount type=bind,source=$PWD/config,target=/home/lovelace/cardano-node/ -p 9100:9100 -p 12798:12798 -p 4444:4444 bluealein56/ehm-node:latest```\
+
+Start Node \
+```./cardano_node_setup/run-cardano-node.sh "$CMD```
+
+
+-----------------------------------------------------------------------
 
 ## Default configuration (cardano-node binary)
 This container runs with `ENTRYPOINT cardano-node`. A `CMD` statement provides a
