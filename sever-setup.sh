@@ -31,7 +31,9 @@ groupadd docker
 usermod -aG docker `whoami`
 
 # Pull the cardano-node docker container
-docker pull registry.gitlab.com/viper-staking/docker-containers/cardano-node:latest
+#docker pull registry.gitlab.com/viper-staking/docker-containers/cardano-node:latest
+docker pull ehm:ehm-node
+
 
 # Create the lovelace user (do not switch user)
 groupadd -g 1024 lovelace
