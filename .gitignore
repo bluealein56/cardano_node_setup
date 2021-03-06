@@ -2,7 +2,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+mainnet-shelley-genesis.json
+mainnet-byron-genesis.json
+topology.json
+config.json
 # C extensions
 *.so
 
