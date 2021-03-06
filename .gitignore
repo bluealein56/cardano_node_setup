@@ -8,7 +8,7 @@ topology.json
 config.json
 # C extensions
 *.so
-
+*.idea
 # Distribution / packaging
 .Python
 build/
