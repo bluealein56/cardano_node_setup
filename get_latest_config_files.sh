@@ -16,7 +16,7 @@ BASELINK="https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest-f
 
 # # Mainnet
 echo "Downloading mainnet files..."
-curl -sSL ${BASELINK}mainnet-config.json -o config/config.json
-curl -sSL ${BASELINK}mainnet-shelley-genesis.json -o config/mainnet-shelley-genesis.json
-curl -sSL ${BASELINK}mainnet-byron-genesis.json -o config/mainnet-byron-genesis.json
-curl -sSL ${BASELINK}mainnet-topology.json -o config/topology.json
+curl -sSL ${BASELINK}mainnet-config.json -o ../config.json
+curl -sSL ${BASELINK}mainnet-shelley-genesis.json -o ../mainnet-shelley-genesis.json
+curl -sSL ${BASELINK}mainnet-byron-genesis.json -o ../mainnet-byron-genesis.json
+curl -sSL ${BASELINK}mainnet-topology.json -o ../topology.json
