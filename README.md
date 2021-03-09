@@ -55,7 +55,7 @@ ehm-rtview --> RealTimeViewer, Prometheus
 SSH to Cloud Server \
 Example: ```ssh -i ./ehm_key root@167.71.163.136```
 
-- Copy and Paste in cloud server terminal. Must be attentative to enter github credentials during install. 
+- Copy and Paste in cloud server terminal. Must be present to enter github credentials during install. 
 ``` 
 sudo apt update 
 sudo echo y | apt install git
@@ -83,7 +83,7 @@ Example: ``` ssh -i ./ehm_key lovelace@167.71.163.136 -p 2222 ```
 
 - Copy and Paste in cloud server terminal. 
 ```
-export CMD="docker run --mount type=bind,source=$PWD/config,target=/home/lovelace/cardano-node/ -p 9100:9100 -p 12798:12798 -p 4444:4444 bluealein56/ehm-node:latest"
+export CMD="docker run --mount type=bind,source=/cardano/config,target=/home/lovelace/cardano-node/ -p 9100:9100 -p 12798:12798 -p 4444:4444 bluealein56/ehm-node:latest"
 ```
 
 ####Start Node 
