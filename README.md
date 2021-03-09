@@ -55,29 +55,32 @@ ehm-rtview --> RealTimeViewer
 - ssh to node, install git, pull gitrepos,
 
 
-``` sudo apt update ``` \
-``` sudo echo y | apt install git ``` \
-``` sudo mkdir /cardano ``` \
-``` sudo chmod 777 /cardano ``` \
-``` cd /cardano/ ``` \
-``` sudo mkdir ./config ``` \
-``` sudo chmod 777 ./config ``` \
-``` git clone https://github.com/bluealein56/cardano_node_setup.git ``` 
+``` 
+sudo apt update 
+sudo echo y | apt install git
+sudo mkdir /cardano
+sudo chmod 777 /cardano
+cd /cardano/
+sudo mkdir ./config
+sudo chmod 777 ./config
+git clone https://github.com/bluealein56/cardano_node_setup.git
 
-``` cd cardano_node_setup ``` \
-``` sh get_latest_config_files.sh ``` \
-```sh sever-setup.sh ``` 
-
+cd cardano_node_setup 
+sh get_latest_config_files.sh
+sh sever-setup.sh
+```
+ 
 -----------------------------------------------------------------------
 
 
 *** Start Container***
 
-```cd /home/lovelace```\
+Set Export Command \
+
 ```export CMD="docker run --mount type=bind,source=$PWD/config,target=/home/lovelace/cardano-node/ -p 9100:9100 -p 12798:12798 -p 4444:4444 bluealein56/ehm-node:latest"```
 
 Start Node \
-```cardano/cardano_node_setup/run-cardano-node.sh "$CMD"```
+```/cardano/cardano_node_setup/run-cardano-node.sh "$CMD"```
 
 
 -----------------------------------------------------------------------
