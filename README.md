@@ -46,7 +46,7 @@ ehm-relay02 --> Relay Node \
 ehm-bp --> Block Producing Node 
 
 #### Reporting Node: 
-ehm-rtview --> RealTimeViewer
+ehm-rtview --> RealTimeViewer, Prometheus
 
 -----------------------------------------------------------------------
 
