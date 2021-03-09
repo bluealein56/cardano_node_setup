@@ -1,14 +1,5 @@
 BASELINK="https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest-finished/download/1/"
 
-sudo apt update
-sudo apt install git
-
-
-sudo mkdir /cardano
-sudo chmod 777 /cardano
-cd /cardano/
-
-git clone https://github.com/bluealein56/cardano_node_setup.git
 
 cd cardano_node_setup
 sh sever-setup.sh
