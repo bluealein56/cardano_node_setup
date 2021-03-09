@@ -82,9 +82,17 @@ Example: ``` ssh -i ./ehm_key lovelace@167.71.163.136 -p 2222 ```
 ####Set Export Command 
 
 - Copy and Paste in cloud server terminal. 
+##### - Mainnet
 ```
-export CMD="docker run --mount type=bind,source=/cardano/config,target=/home/lovelace/cardano-node/ -p 9100:9100 -p 12798:12798 -p 4444:4444 bluealein56/ehm-node:latest"
+export CMD="docker run --mount type=bind,source=/cardano/config/mainnet,target=/home/lovelace/cardano-node/ -p 9100:9100 -p 12798:12798 -p 4444:4444 bluealein56/ehm-node:latest"
 ```
+
+##### - Testnet
+```
+export CMD="docker run --mount type=bind,source=/cardano/config/testnet,target=/home/lovelace/cardano-node/ -p 9100:9100 -p 12798:12798 -p 4444:4444 bluealein56/ehm-node:latest"
+```
+
+
 
 ####Start Node 
 ```
