@@ -85,7 +85,8 @@ systemctl restart ssh
 
 # Setup the firewall
 ufw allow 2222/tcp  # ssh port
-ufw allow 3001/tcp  # cardano-node port
+ufw allow 3001/tcp  # cardano-node port / RTView port
+ufw allow 3000/tcp  # cardano-node port / RTView port
 ufw allow 9100/tcp  # prometheus port
 ufw allow 12798/tcp # prometheus port
 ufw allow 8080/http # RTView port
