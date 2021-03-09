@@ -226,3 +226,11 @@ docker run \
 5. Access the prometheus web UI at `<container IP>:9090/graph`
 
 ---
+
+#### Install Cardano RTView
+ On monitoring node:
+ ```
+wget https://github.com/input-output-hk/cardano-rt-view/releases/download/0.3.0/cardano-rt-view-0.3.0-linux-x86_64.tar.gz
+```
+Unzip File
+Example: ```tar -xzf cardano-rt-view-0.3.0-linux-x86_64.tar.gz```
