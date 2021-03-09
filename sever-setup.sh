@@ -18,9 +18,6 @@ apt update
 apt -y upgrade
 apt -y install git tmux ufw htop chrony curl rsync
 
-# EHM Directory Setup
-
-
 
 
 # Download and install Docker
