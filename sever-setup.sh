@@ -18,8 +18,6 @@ apt update
 apt -y upgrade
 apt -y install git tmux ufw htop chrony curl rsync
 
-
-
 # Download and install Docker
 curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
