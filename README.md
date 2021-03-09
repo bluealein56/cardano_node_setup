@@ -73,6 +73,45 @@ sh sever-setup.sh
  
 -----------------------------------------------------------------------
 
+# Edit Config Files
+
+Example: ``` vim /cardano/config/mainnet/config.json```
+
+- Block Producer Node
+```
+{
+  "Producers": [
+    {
+      "addr": "167.71.163.136",
+      "port": 3001,
+      "valency": 1
+    }
+  ]
+}
+```
+
+- Relay Node \
+Input your Relay and Other network Relays on the internet.
+
+```
+{
+  "Producers": [
+    {
+      "addr": ""relays-new.cardano-testnet.iohkdev.io"",
+      "port": 3001,
+      "valency": 2
+    },
+    {
+      "addr": "167.71.163.136",
+      "port": 3001,
+      "valency": 1
+    }
+  ]
+}
+
+```
+
+-----------------------------------------------------------------------
 
 *** Start Container***
 
