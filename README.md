@@ -116,7 +116,7 @@ docker run bluealein56/ehm-node:latest
 Below is an example on overriding the default CMD arguments to run cardano-node 
 as a block producing node:
 ``` bash
-docker run bluealein56/ehm-node:latestt \
+docker run bluealein56/ehm-node:latest \
     --database-path $HOME/cardano-node/db/ \
     --socket-path $HOME/cardano-node/db/node.socket \
     --host-addr "0.0.0.0" \
@@ -193,9 +193,11 @@ script.
 to the `config.json` file:
 
 ```
-hasPrometheus:
-   - "0.0.0.0"
-   - 12789
+ scrape_configs:
+   - job_name: 'ehm-bp' # To scrape data from the cardano node
+     scrape_interval: 5s
+     static_configs:
+       - targets: ['142.93.79.51:12798']
 ```
 
 1. Pull prometheus docker container from [Dockerhub](https://hub.docker.com/r/prom/prometheus):
