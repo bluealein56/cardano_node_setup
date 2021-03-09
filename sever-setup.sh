@@ -33,7 +33,7 @@ usermod -aG docker `whoami`
 # Pull the cardano-node docker container
 #docker pull registry.gitlab.com/viper-staking/docker-containers/cardano-node:latest
 docker login
-docker pull ehm:ehm-node
+docker pull bluealein56/ehm-node:latest
 
 
 # Create the lovelace user (do not switch user)
