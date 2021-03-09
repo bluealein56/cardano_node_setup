@@ -273,3 +273,8 @@ wget https://github.com/input-output-hk/cardano-rt-view/releases/download/0.3.0/
 ```
 Unzip File
 Example: ```sudo tar -xzf cardano-rt-view-0.3.0-linux-x86_64.tar.gz```
+
+- Run Executable and follow onscreen directions to setup
+```
+/cardano/cardano-rt-view
+```
