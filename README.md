@@ -272,4 +272,4 @@ docker run \
 wget https://github.com/input-output-hk/cardano-rt-view/releases/download/0.3.0/cardano-rt-view-0.3.0-linux-x86_64.tar.gz
 ```
 Unzip File
-Example: ```tar -xzf cardano-rt-view-0.3.0-linux-x86_64.tar.gz```
+Example: ```sudo tar -xzf cardano-rt-view-0.3.0-linux-x86_64.tar.gz```
