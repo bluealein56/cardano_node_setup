@@ -79,7 +79,7 @@ sh sever-setup.sh
 SSH back into cloud server with new username lovelace and specify ssh port 2222 \
 Example: ``` ssh -i ./ehm_key lovelace@167.71.163.136 -p 2222 ``` 
 
-####Set Export Command 
+#### Set Export Command for desired deployment environment
 
 - Copy and Paste in cloud server terminal. 
 ##### - Mainnet
@@ -94,7 +94,7 @@ export CMD="docker run --mount type=bind,source=/cardano/config/testnet,target=/
 
 
 
-####Start Node 
+#### Start Node 
 ```
 /cardano/cardano_node_setup/run-cardano-node.sh "$CMD"
 ```
