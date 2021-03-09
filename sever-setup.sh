@@ -48,7 +48,7 @@ mkdir /home/lovelace/cardano-node
 mkdir /home/lovelace/cardano-node/db
 touch /home/lovelace/cardano-node/node.socket
 chown -R lovelace:lovelace /home/lovelace/cardano-node
-chmod -R 774
+chmod -R 774 /home/lovelace/cardano-node
 
 # Configure chrony (use the Google time server)
 cat > /etc/chrony/chrony.conf << EOM
