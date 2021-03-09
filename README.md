@@ -52,9 +52,10 @@ ehm-rtview --> RealTimeViewer
 
 # Setup Node
 
-- ssh to node, install git, pull gitrepos,
+SSH to Cloud Server \
+Example: ```ssh -i ./ehm_key root@167.71.163.136```
 
-
+- Copy and Paste in cloud server terminal. Must be attentative to enter github credentials during install. 
 ``` 
 sudo apt update 
 sudo echo y | apt install git
@@ -75,12 +76,20 @@ sh sever-setup.sh
 
 *** Start Container***
 
-Set Export Command \
+SSH back into cloud server with new username lovelace and specify ssh port 2222 \
+Example: ``` ssh -i ./ehm_key lovelace@167.71.163.136 -p 2222 ``` 
 
-```export CMD="docker run --mount type=bind,source=$PWD/config,target=/home/lovelace/cardano-node/ -p 9100:9100 -p 12798:12798 -p 4444:4444 bluealein56/ehm-node:latest"```
+####Set Export Command 
 
-Start Node \
-```/cardano/cardano_node_setup/run-cardano-node.sh "$CMD"```
+- Copy and Paste in cloud server terminal. 
+```
+export CMD="docker run --mount type=bind,source=$PWD/config,target=/home/lovelace/cardano-node/ -p 9100:9100 -p 12798:12798 -p 4444:4444 bluealein56/ehm-node:latest"
+```
+
+####Start Node 
+```
+/cardano/cardano_node_setup/run-cardano-node.sh "$CMD"
+```
 
 
 -----------------------------------------------------------------------
