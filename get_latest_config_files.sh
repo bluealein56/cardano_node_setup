@@ -1,5 +1,20 @@
 BASELINK="https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest-finished/download/1/"
 
+sudo apt update
+sudo apt install git
+
+
+sudo mkdir /cardano
+sudo chmod 777 /cardano
+cd /cardano/
+
+git clone https://github.com/bluealein56/cardano_node_setup.git
+
+cd cardano_node_setup
+sh sever-setup.sh
+
+
+
 # Shelley Testnet
 #echo "Downloading shelley_testnet files..."
 #curl -sSL ${BASELINK}testnet-config.json -o config/config.json
@@ -19,10 +34,10 @@ BASELINK="https://hydra.iohk.io/job/Cardano/iohk-nix/cardano-deployment/latest-f
 
 # # Mainnet
 echo "Downloading mainnet files..."
-wget https://hydra.iohk.io/job/Cardano/cardano-node/cardano-deployment/latest-finished/download/1/mainnet-config.json -O ../config/config.json
-wget https://hydra.iohk.io/job/Cardano/cardano-node/cardano-deployment/latest-finished/download/1/mainnet-byron-genesis.json -O ../config/mainnet-byron-genesis.json
-wget https://hydra.iohk.io/job/Cardano/cardano-node/cardano-deployment/latest-finished/download/1/mainnet-shelley-genesis.json -O ../config/mainnet-shelley-genesis.json
-wget https://hydra.iohk.io/job/Cardano/cardano-node/cardano-deployment/latest-finished/download/1/mainnet-topology.json -O ../config/topology.json
+wget https://hydra.iohk.io/job/Cardano/cardano-node/cardano-deployment/latest-finished/download/1/mainnet-config.json -O /cardano/config/config.json
+wget https://hydra.iohk.io/job/Cardano/cardano-node/cardano-deployment/latest-finished/download/1/mainnet-byron-genesis.json -O /cardano/config/mainnet-byron-genesis.json
+wget https://hydra.iohk.io/job/Cardano/cardano-node/cardano-deployment/latest-finished/download/1/mainnet-shelley-genesis.json -O /cardano/config/mainnet-shelley-genesis.json
+wget https://hydra.iohk.io/job/Cardano/cardano-node/cardano-deployment/latest-finished/download/1/mainnet-topology.json -O /cardano/config/topology.json
 
 
 
