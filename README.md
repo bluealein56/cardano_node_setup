@@ -66,7 +66,7 @@ sudo mkdir ./config
 sudo chmod 777 ./config
 git clone https://github.com/bluealein56/cardano_node_setup.git
 
-cd cardano_node_setup 
+cd /cardano/cardano_node_setup 
 sh get_latest_config_files.sh
 sh sever-setup.sh
 ```
