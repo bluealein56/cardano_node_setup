@@ -28,7 +28,8 @@ https://hub.docker.com/repository/docker/bluealein56/
 https://github.com/bluealein56/cardano_node_setup \
 https://github.com/bluealein56/cardano_docker_containers \
 #### GIST - (Pool Metadata)
-<script src="https://gist.github.com/bluealein56/ba39100ec879762523442eab7185ed29.js"></script>
+JSON File: https://git.io/JqLuF \
+GIT Link: https://gist.github.com/bluealein56/ba39100ec879762523442eab7185ed29
 
 
 
